@@ -1,0 +1,203 @@
+:root {
+    --primary-background  : #121212;
+    --secondary-background: #1a1a1a;
+
+    --primary-font-color  : white;
+    --secondary-font-color: #cccccc;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background: var(--primary-background);
+}
+
+#main {
+    --spacing: 20px;
+
+    color: white;
+    font-size: x-large;
+    font-family: monospace;
+
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+
+    overflow: hidden;
+
+    padding: var(--spacing);
+}
+
+h1 {
+    font-size: xx-large;
+    margin: 0 0 15px 0;
+}
+h2 {
+    font-size: 1.3rem;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    background: var(--primary-background);
+    border: 3px solid var(--primary-background);
+
+    font-size: x-large;
+    color: var(--secondary-font-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+
+    transition: all ease 180ms;
+}
+button:not(:disabled):hover {
+    background: var(--secondary-background);
+    color: white;
+    cursor: pointer;
+}
+button:disabled {
+    opacity: 0.5;
+}
+
+progress {
+    width: 100%;
+}
+
+
+
+.left-window {
+    float: left;
+    width: 280px;
+    height: 100%;
+}
+.right-window {
+    float: left;
+    width: calc(100% - 310px);
+    height: 100%;
+    margin-left: var(--spacing);
+}
+#popup-container {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #00000066;
+    backdrop-filter: blur(2px);
+}
+#popup-container > div {
+    position: absolute;
+    padding: 15px 20px;
+    border-radius: 5px;
+    background: var(--secondary-background);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+.container {
+    border-radius: 5px;
+    background: var(--secondary-background);
+}
+.container > .inner {
+    padding: 10px 15px;
+    height: calc(100% - 20px);
+}
+.inner> .inner-division {
+    background: var(--primary-background);
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+
+#stats {
+    height: 320px;
+    margin-bottom: var(--spacing);
+}
+
+.stats-field {
+    display: flex;
+    justify-content: space-between;
+}
+.stats-field > label {
+    color: var(--secondary-font-color);
+}
+
+
+
+#inventory {
+    height: calc(100% - calc(320px + var(--spacing)));
+}
+
+#inventory-container {
+    height: calc(100% - 62px);
+    background: var(--primary-background);
+    display: flex;
+    border-radius: 5px;
+    padding: 5px;
+    flex-direction: column;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 18px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+#inventory-container::-webkit-scrollbar {
+    width: 8px;
+}
+#inventory-container::-webkit-scrollbar-track {
+    background: #ffffff11;
+    border-radius: 5px;
+}
+#inventory-container::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 5px;
+}
+#inventory-container > .item-slot {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+    flex-wrap: wrap;
+}
+#inventory-container > .item-slot > img {
+    width: 50px;
+    height: 50px;
+
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+}
+#inventory-container > .item-slot > h2 {
+    width: 170px;
+    max-height: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#inventory-container > .item-slot > span {
+    font-size: large;
+    color: var(--secondary-font-color);
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#actions {
+    background: var(--secondary-background);
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+#game-map {
+    height: calc(100% - 100px);
+}

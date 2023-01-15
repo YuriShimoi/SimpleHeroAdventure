@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple Hero Adventure</title>
+
+        <link rel="stylesheet" href="static/style.css">
+        <script src="static/player.js"></script>
+        <script defer src="static/main.js"></script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="popup-container">
+                <div id="initial-message">
+                    <h1>Simple Hero Adventure</h1>
+                    <span>Escolha sua classe inicial!</span>
+                    <br><br>
+                    <button onclick="startGame('knight')">Cavaleiro</button>
+                    <button onclick="startGame('archer')">Arqueiro</button>
+                </div>
+            </div>
+            <div class="left-window">
+                <div id="stats" class="container">
+                    <div class="inner">
+                        <h1>Status</h1>
+                    </div>
+                </div>
+                <div id="inventory" class="container">
+                    <div class="inner">
+                        <h1>Inventário</h1>
+                        <div id="inventory-container">
+                            <div class="item-slot">
+                                <img src="img/item1.png">
+                                <h2 title="Item com um nome bem grande mesmo">Item com um nome gigantesco</h2>
+                                <span>+HP:20 |</span>
+                                <span>+DEF:5 |</span>
+                                <span>+STR:120</span>
+                            </div>
+                            <div class="item-slot">
+                                <img src="img/item1.png">
+                                <h2 title="Item com um nome bem grande mesmo">Item</h2>
+                                <span>+HP:20 |</span>
+                                <span>+DEF:5 |</span>
+                                <span>+STR:120</span>
+                            </div>
+                            <div class="item-slot">
+                                <img src="img/item1.png">
+                                <h2 title="Item com um nome bem grande mesmo">Item</h2>
+                                <span>+HP:20 |</span>
+                                <span>+DEF:5 |</span>
+                                <span>+STR:120</span>
+                            </div>
+                            <div class="item-slot">
+                                <img src="img/item1.png">
+                                <h2 title="Item com um nome bem grande mesmo">Item</h2>
+                                <span>+HP:20 |</span>
+                                <span>+DEF:5 |</span>
+                                <span>+STR:120</span>
+                            </div>
+                            <div class="item-slot">
+                                <img src="img/item1.png">
+                                <h2 title="Item com um nome bem grande mesmo">Item</h2>
+                                <span>+HP:20 |</span>
+                                <span>+DEF:5 |</span>
+                                <span>+STR:120</span>
+                            </div>
+                            <div class="item-slot">
+                                <img src="img/item1.png">
+                                <h2 title="Item com um nome bem grande mesmo">Item</h2>
+                                <span>+HP:20 |</span>
+                                <span>+DEF:5 |</span>
+                                <span>+STR:120</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right-window">
+                <div id="map" class="container">
+                    <div class="inner">
+                        <div id="actions" class="inner-division">
+                            <button>Treino</button>
+                            <button disabled>Aventura</button>
+                            <button disabled>Descanso</button>
+                        </div>
+                        <div id="game-map" class="inner-division">
+                            <h1>Mapa</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
